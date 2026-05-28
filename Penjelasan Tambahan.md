@@ -31,7 +31,7 @@ Dalam kasus kode ini, tujuan utamanya adalah menerapkan metode Degree Centrality
 
 ###### **B. GRAPH DIRECTED (Kode 2)**
 
-Graf Berarah (Directed Graph / DiGraph) adalah representasi di mana setiap edge punya arah — A→B tidak berarti B→A. Koneksi bersifat asimetris. Contoh nyatanya: Twitter/Instagram follow (kamu bisa follow artis tanpa dia follow balik), sitasi jurnal (paper A mengutip paper B), atau aliran data dalam sebuah sistem. Di NetworkX dibuat dengan nx.DiGraph().
+Graf Berarah (Directed Graph / DiGraph) adalah representasi di mana setiap edge punya arah A→B tidak berarti B→A. Koneksi bersifat asimetris. Contoh nyatanya: Twitter/Instagram follow (kamu bisa follow artis tanpa dia follow balik), sitasi jurnal (paper A mengutip paper B), atau aliran data dalam sebuah sistem. Di NetworkX dibuat dengan nx.DiGraph().
 
 
 
@@ -45,7 +45,7 @@ Dengan directed graph, kita bisa membedakan influencer yang dikagumi banyak oran
 
 Ini adalah algoritma paling fundamental: mengubah data tabular (CSV) menjadi struktur data graf yang bisa dianalisis.
 
-Cara kerja: nx.from\_pandas\_edgelist() membaca setiap baris CSV dan membangun adjacency list — struktur data dictionary di mana setiap key adalah nama node dan value-nya adalah himpunan (set) node yang terhubung langsung. Proses ini berjalan dengan kompleksitas O(V + E) di mana V = jumlah node dan E = jumlah edge.
+Cara kerja: nx.from\_pandas\_edgelist() membaca setiap baris CSV dan membangun adjacency list, struktur data dictionary di mana setiap key adalah nama node dan value-nya adalah himpunan (set) node yang terhubung langsung. Proses ini berjalan dengan kompleksitas O(V + E) di mana V = jumlah node dan E = jumlah edge.
 
 Perbedaan antar kode:
 
@@ -92,18 +92,12 @@ Anggapan bahwa paling banyak diikuti = paling sentral hanya valid dalam satu def
 
 
 Selain data selebriti, kode ini sangat relevan untuk:
-
-Bidang akademik — menganalisis jaringan sitasi ilmiah untuk menemukan paper atau peneliti paling berpengaruh.
-
-Bidang teknologi — memetakan hyperlink antar halaman web (fondasi algoritma PageRank Google).
-
-Bidang keuangan — mendeteksi aliran transaksi mencurigakan atau pola money laundering dalam jaringan transfer uang.
-
-Bidang epidemiologi — memodelkan penyebaran penyakit (siapa menginfeksi siapa).
-
-Bidang organisasi — memetakan alur komunikasi internal perusahaan untuk menemukan "bottleneck" informasi.
-
-Bidang logistik — menganalisis jaringan distribusi barang.
+* Bidang akademik — menganalisis jaringan sitasi ilmiah untuk menemukan paper atau peneliti paling berpengaruh.
+* Bidang teknologi — memetakan hyperlink antar halaman web (fondasi algoritma PageRank Google).
+* Bidang keuangan — mendeteksi aliran transaksi mencurigakan atau pola money laundering dalam jaringan transfer uang.
+* Bidang epidemiologi — memodelkan penyebaran penyakit (siapa menginfeksi siapa).
+* Bidang organisasi — memetakan alur komunikasi internal perusahaan untuk menemukan "bottleneck" informasi.
+* Bidang logistik — menganalisis jaringan distribusi barang.
 
 
 
