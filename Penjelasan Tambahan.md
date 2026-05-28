@@ -1,5 +1,4 @@
 ##### **SOCIAL NETWORK ANALYSIS WITH NETWORKX**
-
 ##### **DEGREE CENTRALITY ANALYSIS**
 
 **Sumber : Handoko, W. T., Anwar, S. N., Supriyanto, E., \& Lestariningsih, E. (2026). Penerapan Social Network Analysis dengan Network X untuk Melihat Derajat Sentralitas pada Dataset Jaringan Sosial. Jurnal Informatika dan Teknologi Komputer, 6(1), 14–22. https://doi.org/10.55606/jitek.v6i1.8768**
