@@ -1,0 +1,196 @@
+From,To
+Selena Gomez,Zendaya
+Selena Gomez,Dwayne Johnson
+Selena Gomez,Jennifer Lopez
+Selena Gomez,Timothée Chalamet
+Selena Gomez,Florence Pugh
+
+Tom Holland,Zendaya
+Tom Holland,Robert Downey Jr.
+Tom Holland,Timothée Chalamet
+Tom Holland,Bella Hadid
+Tom Holland,Kendall Jenner
+Tom Holland,Kylie Jenner
+Tom Holland,Ryan Reynolds
+Tom Holland,Dwayne Johnson
+Tom Holland,Kevin Hart
+Tom Holland,Gal Gadot
+Tom Holland,Florence Pugh
+Tom Holland,Millie Bobby Brown
+Tom Holland,Hailey Bieber
+
+Jennifer Lopez,Zendaya
+Jennifer Lopez,Dwayne Johnson
+Jennifer Lopez,Kevin Hart
+Jennifer Lopez,Ryan Reynolds
+Jennifer Lopez,Timothée Chalamet
+Jennifer Lopez,Jason Momoa
+Jennifer Lopez,Gigi Hadid
+Jennifer Lopez,Hailey Bieber
+Jennifer Lopez,Kendall Jenner
+Jennifer Lopez,Kylie Jenner
+Jennifer Lopez,Kim Kardashian
+Jennifer Lopez,Robert Downey Jr.
+
+Dwayne Johnson,Kevin Hart
+
+Kevin Hart,Selena Gomez
+Kevin Hart,Zendaya
+Kevin Hart,Jennifer Lopez
+Kevin Hart,Emilia Clarke
+Kevin Hart,Kendall Jenner
+Kevin Hart,Kim Kardashian
+
+Gal Gadot,Zendaya
+Gal Gadot,Tom Holland
+Gal Gadot,Dwayne Johnson
+Gal Gadot,Ryan Reynolds
+Gal Gadot,Timothée Chalamet
+Gal Gadot,Henry Cavill
+Gal Gadot,Jason Momoa
+Gal Gadot,Priyanka Chopra
+Gal Gadot,Gigi Hadid
+Gal Gadot,Hailey Bieber
+Gal Gadot,Kylie Jenner
+Gal Gadot,Kim Kardashian
+Gal Gadot,Robert Downey Jr.
+
+Ryan Reynolds,Zendaya
+Ryan Reynolds,Dwayne Johnson
+Ryan Reynolds,Henry Cavill
+Ryan Reynolds,Emilia Clarke
+Ryan Reynolds,Gigi Hadid
+
+Florence Pugh,Dwayne Johnson
+Florence Pugh,Millie Bobby Brown
+Florence Pugh,Priyanka Chopra
+Florence Pugh,Zendaya
+Florence Pugh,Timothée Chalamet
+Florence Pugh,Anya Taylor-Joy
+Florence Pugh,Emilia Clarke
+Florence Pugh,Gigi Hadid
+
+Anya Taylor-Joy,Selena Gomez
+Anya Taylor-Joy,Zendaya
+Anya Taylor-Joy,Emilia Clarke
+Anya Taylor-Joy,Sophie Turner
+
+Millie Bobby Brown,Selena Gomez
+Millie Bobby Brown,Zendaya
+Millie Bobby Brown,Jennifer Lopez
+Millie Bobby Brown,Dwayne Johnson
+Millie Bobby Brown,Kevin Hart
+Millie Bobby Brown,Henry Cavill
+Millie Bobby Brown,Emilia Clarke
+Millie Bobby Brown,Sophie Turner
+Millie Bobby Brown,Priyanka Chopra
+Millie Bobby Brown,Gigi Hadid
+Millie Bobby Brown,Bella Hadid
+Millie Bobby Brown,Hailey Bieber
+Millie Bobby Brown,Kendall Jenner
+Millie Bobby Brown,Kylie Jenner
+Millie Bobby Brown,Kim Kardashian
+Millie Bobby Brown,Robert Downey Jr.
+
+Henry Cavill,Dwayne Johnson
+Henry Cavill,Gal Gadot
+Henry Cavill,Ryan Reynolds
+Henry Cavill,Millie Bobby Brown
+Henry Cavill,Jason Momoa
+Henry Cavill,Emilia Clarke
+Henry Cavill,Robert Downey Jr.
+
+Jason Momoa,Zendaya
+Jason Momoa,Jennifer Lopez
+Jason Momoa,Dwayne Johnson
+Jason Momoa,Gal Gadot
+Jason Momoa,Ryan Reynolds
+Jason Momoa,Timothée Chalamet
+Jason Momoa,Florence Pugh
+Jason Momoa,Henry Cavill
+Jason Momoa,Emilia Clarke
+
+Emilia Clarke,Jennifer Lopez
+Emilia Clarke,Ryan Reynolds
+Emilia Clarke,Timothée Chalamet
+Emilia Clarke,Florence Pugh
+Emilia Clarke,Jason Momoa
+Emilia Clarke,Sophie Turner
+Emilia Clarke,Robert Downey Jr.
+
+Sophie Turner,Zendaya
+Sophie Turner,Ryan Reynolds
+Sophie Turner,Timothée Chalamet
+Sophie Turner,Florence Pugh
+Sophie Turner,Anya Taylor-Joy
+Sophie Turner,Millie Bobby Brown
+Sophie Turner,Emilia Clarke
+Sophie Turner,Gigi Hadid
+Sophie Turner,Bella Hadid
+Sophie Turner,Hailey Bieber
+Sophie Turner,Kendall Jenner
+Sophie Turner,Kylie Jenner
+Sophie Turner,Kim Kardashian
+
+Priyanka Chopra,Zendaya
+Priyanka Chopra,Dwayne Johnson
+Priyanka Chopra,Gal Gadot
+Priyanka Chopra,Timothée Chalamet
+Priyanka Chopra,Florence Pugh
+Priyanka Chopra,Millie Bobby Brown
+Priyanka Chopra,Gigi Hadid
+Priyanka Chopra,Kylie Jenner
+Priyanka Chopra,Kim Kardashian
+
+Gigi Hadid,Zendaya
+Gigi Hadid,Jennifer Lopez
+Gigi Hadid,Ryan Reynolds
+Gigi Hadid,Sophie Turner
+Gigi Hadid,Priyanka Chopra
+Gigi Hadid,Hailey Bieber
+Gigi Hadid,Kendall Jenner
+Gigi Hadid,Kylie Jenner
+Gigi Hadid,Bella Hadid
+
+Bella Hadid,Zendaya
+Bella Hadid,Anya Taylor-Joy
+Bella Hadid,Millie Bobby Brown
+Bella Hadid,Gigi Hadid
+Bella Hadid,Hailey Bieber
+Bella Hadid,Kendall Jenner
+Bella Hadid,Kylie Jenner
+Bella Hadid,Kim Kardashian
+
+Hailey Bieber,Zendaya
+Hailey Bieber,Tom Holland
+Hailey Bieber,Gal Gadot
+Hailey Bieber,Ryan Reynolds
+Hailey Bieber,Timothée Chalamet
+Hailey Bieber,Millie Bobby Brown
+Hailey Bieber,Sophie Turner
+Hailey Bieber,Gigi Hadid
+Hailey Bieber,Bella Hadid
+Hailey Bieber,Kim Kardashian
+
+Kendall Jenner,Zendaya
+Kendall Jenner,Kevin Hart
+Kendall Jenner,Timothée Chalamet
+Kendall Jenner,Gigi Hadid
+Kendall Jenner,Bella Hadid
+Kendall Jenner,Hailey Bieber
+Kendall Jenner,Kylie Jenner
+Kendall Jenner,Kim Kardashian
+
+Kylie Jenner,Timothée Chalamet
+Kylie Jenner,Florence Pugh
+Kylie Jenner,Gigi Hadid
+Kylie Jenner,Bella Hadid
+Kylie Jenner,Hailey Bieber
+Kylie Jenner,Kendall Jenner
+Kylie Jenner,Kim Kardashian
+
+Kim Kardashian,Jennifer Lopez
+Kim Kardashian,Bella Hadid
+Kim Kardashian,Hailey Bieber
+Kim Kardashian,Kendall Jenner
+Kim Kardashian,Kylie Jenner
