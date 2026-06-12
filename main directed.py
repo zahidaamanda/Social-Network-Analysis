@@ -68,64 +68,8 @@ print(f"Jumlah node  : {G.number_of_nodes()}")  # berapa banyak entitas (selebri
 print(f"Jumlah edge  : {G.number_of_edges()}")  # berapa banyak koneksi/hubungan
 print(f"Tipe graph   : {type(G).__name__}")     # pastikan bertipe DiGraph
 
-# B. VISUALISASI 1: GRAPH DASAR
 
-fig, ax = plt.subplots(figsize=(10, 10))
-# Buat figure ukuran 10x10 inci
-
-fig.suptitle(
-    "Visualisasi Directed Graph",
-    fontsize=14, fontweight='bold', y=0.95
-)
-
-pos_basic = nx.spring_layout(G, k=1.5, iterations=50, seed=42)
-# spring_layout: algoritma force-directed layout (Fruchterman-Reingold), bertugas menghitung posisi terbaik agar graf tersebut rapi dan mudah dibaca manusia.
-# Node yang terhubung saling "menarik", node yang tidak terhubung saling "mendorong".
-# k=1.5 → jarak ideal antar node (semakin besar, semakin renggang)
-# iterations=50 → jumlah iterasi simulasi fisika. Menentukan berapa kali algoritma mengulang perhitungan gaya tarik dan tolak sebelum berhenti.
-# seed=42 → agar posisi node konsisten setiap kali dijalankan
-
-# 1. Gambar node terlebih dahulu
-nx.draw_networkx_nodes(
-    G, pos_basic,
-    node_color='yellow',
-    node_size=1000,   # ukuran lingkaran node dalam satuan area (pixel^2)
-    alpha=0.9,        # transparansi: 0=transparan penuh, 1=solid penuh
-    ax=ax
-)
-
-# 2. Gambar edge dengan menyertakan node_size agar panah berhenti di luar lingkaran
-nx.draw_networkx_edges(
-    G, pos_basic,
-    edge_color='gray',
-    alpha=0.6,
-    node_size=1000,
-    arrowstyle='-|>',
-    arrowsize=20,
-    # ukuran kepala panah dalam poin
-    connectionstyle='arc3,rad=0.1',
-    # arc3 = edge melengkung; rad=0.1 = sedikit melengkung
-    # kelengkungan mencegah dua panah saling bertumpuk dan tidak terbaca
-    ax=ax
-)
-
-#3. Outline label atau nama aktor node supaya mudah dibaca
-draw_labels_with_outline(
-    G, pos_basic,
-    font_size=9,
-    font_color='black',
-    outline_color='white',
-    outline_width=1,
-    ax=ax
-)
-
-ax.axis('off')                          # sembunyikan sumbu x dan y (tidak diperlukan)
-plt.tight_layout(rect=[0, 0, 1, 0.93]) # atur margin agar title tidak tertutup plot
-plt.show()
-plt.close()  # tutup figure agar memori tidak bocor saat program lanjut
-
-
-# C. PERHITUNGAN IN-DEGREE & OUT-DEGREE
+# B. PERHITUNGAN IN-DEGREE & OUT-DEGREE
 
 in_degree_map    = dict(G.in_degree())
 # in_degree = jumlah edge MASUK ke node 
@@ -158,7 +102,7 @@ pos = nx.kamada_kawai_layout(G)
 # Lebih lambat tapi lebih estetis untuk visualisasi akademik.
 
 
-# D. VISUALISASI 2: IN / OUT DEGREE 
+# C. VISUALISASI 2: IN / OUT DEGREE 
 
 max_in      = max(in_degree_map.values()) or 1
 # Nilai in-degree terbesar, digunakan sebagai pembagi normalisasi.
@@ -249,7 +193,7 @@ plt.show()
 plt.close()
 
 
-# E. DEGREE CENTRALITY (IN, OUT, COMBINED)
+# D. DEGREE CENTRALITY (IN, OUT, COMBINED)
 
 in_dc       = nx.in_degree_centrality(G)
 # In-degree centrality = in_degree(v) / (N-1)
@@ -278,14 +222,14 @@ for node, comb in most_influential:
     print(f"{node:<20} {in_dc[node]:>8.4f} {out_dc[node]:>8.4f} {comb:>10.4f}")
 
 
-# F. VISUALISASI 3: DEGREE CENTRALITY
+# E. VISUALISASI 3: DEGREE CENTRALITY
 
 centrality_sizes  = [in_dc[n] * 6000 + 200 for n in G.nodes()]
 # Ukuran node proporsional terhadap in DC.
 # *6000 = faktor skala besar agar perbedaan centrality terlihat dramatis secara visual.
 # +200 = ukuran minimum agar node tetap terlihat.
 
-centrality_colors = [in_dc[n] for n in G.nodes()]
+centrality_colors = [combined_dc[n] for n in G.nodes()]
 # Warna mengikuti in-degree centrality saja (bukan combined),
 # sehingga warna dan ukuran mengkodekan dua dimensi berbeda sekaligus.
 
@@ -293,7 +237,7 @@ fig, ax = plt.subplots(figsize=(13, 13))
 
 fig.suptitle(
     "Visualisasi Directed Graph – Degree Centrality\n"
-    "(ukuran = in-degree DC, warna = in-degree DC)",
+    "(ukuran = in-degree DC, warna = Combined-degree DC)",
     fontsize=13, fontweight='bold', y=0.95
 )
 
@@ -331,20 +275,28 @@ draw_labels_with_outline(
     ax=ax
 )
 
-# Sub-label nilai in DC
+# Sub-label informasi node
+# Menampilkan In-Degree, Out-Degree, dan In-Degree Centrality
 centrality_labels = {
-    node: f"{in_dc[node]:.2f}"
+    node:
+        f"in:{in_degree_map[node]}  "
+        f"out:{out_degree_map[node]}\n"
+        f"DC:{in_dc[node]:.2f}"
     for node in G.nodes()
-    # Tampilkan nilai combined DC dibulatkan 2 desimal di bawah nama node
 }
-centrality_label_pos = {k: (v[0], v[1] - 0.06) for k, v in pos.items()}
-# Geser posisi 0.06 unit ke bawah
+
+centrality_label_pos = {
+    k: (v[0], v[1] - 0.08)
+    for k, v in pos.items()
+}
+# Geser posisi 0.08 unit ke bawah
 
 draw_labels_with_outline(
-    G, centrality_label_pos,
+    G,
+    centrality_label_pos,
     labels=centrality_labels,
-    font_size=7,
-    font_color='cyan',    # cyan kontras dengan warna plasma (ungu/kuning)
+    font_size=6,
+    font_color='cyan',
     outline_color='black',
     outline_width=1,
     ax=ax
